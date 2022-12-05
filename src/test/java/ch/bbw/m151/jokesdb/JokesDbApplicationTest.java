@@ -53,25 +53,25 @@ public class JokesDbApplicationTest implements WithAssertions {
 	}
 
 	@Test
-	void jokesCreationTimestamp(){
+	void jokesCreationTimestampisNotNull(){
 		JokesEntity joke = service.fetchApi();
 		assertThat(joke.getCreatedOn()).isEqualTo(LocalDateTime.now());
 	}
 
 	@Test
-	void jokeUpdatedTimeStamp() {
+	void jokeUpdatedTimeStampisNotNull() {
 		JokesEntity joke = service.fetchApi();
 		assertThat(joke.getUpdatedOn()).isNotNull();
 	}
 
 	@Test
-	void jokeLanguage() {
+	void jokeLanguageisNotNull() {
 		JokesEntity joke = service.fetchApi();
 		assertThat(joke.getLang()).isNotNull();
 	}
 
 	@Test
-	void jokeCatagory() {
+	void jokeCatagoryisNotNull() {
 		JokesEntity joke = service.fetchApi();
 		assertThat(joke.getCategory()).isNotNull();
 	}
